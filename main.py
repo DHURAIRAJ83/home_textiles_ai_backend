@@ -15,7 +15,7 @@ app.add_middleware(
 )
 
 @app.get("/get_best_price")
-def get_best_price(product: str):
+async def get_best_price(product: str):
     return {
         "amazon": scrape_amazon(product),
         "flipkart": scrape_flipkart(product),
