@@ -1,9 +1,9 @@
-def scrape_alibaba(product: str):
+def scrape_alibaba(product):
     return [
         {
             "product": f"{product} - Alibaba Bulk Deal",
             "price": "$3",
-            "link": "https://www.alibaba.com/product-detail/example",
-            "website": "Alibaba"
+            "website": "Alibaba",
+            "link": f"https://www.alibaba.com/trade/search?SearchText={product.replace(' ', '+')}"
         }
     ]
